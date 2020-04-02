@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>NEW POST</title>
+{% endblock %}
+
+{% block body %}
+    <h1>Creat your new post:</h1>
+    <hr>
+    <br>
+    <h2>New post:</h2>
+    <form action='/posts/new_post' method='POST'>
+        <label for="content">Title: </label>
+        <input aria-label="Enter your title" class="form-control" id='title' name='title' placeholder="Enter your title" type="text">
+        <br>
+        <label for="content">Author: </label>
+        <input aria-label="first and last name" class="form-control" id="author" name='author' placeholder="First and last name" type="text">
+        <br>
+        <label for="content">Post: </label>
+        <textarea aria-label="Enter content" class="form-control" id="content" name='content' placeholder="Enter content" rows="6"></textarea>
+        <br>
+        <input class="btn btn-success" type='submit' value='Post'>
+        <a class="btn btn-danger" href='/posts'>Cancel</a>
+    </form>
+    <hr>
+{% endblock %}
